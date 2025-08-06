@@ -65,6 +65,3 @@ let xyz = 20;
 // var -> hoist -> undefined
 // let -> hoist -> reference error (no value set)
 // const -> hoist -> reference error (no value set)
-
-// 59:12
-
