@@ -63,6 +63,25 @@ let w = "OP";
 console.log(typeof c);
 console.log(typeof w);
 
+// type coercion (== vs ===)
+// Truthy and falsy values
+
+// type coercion -> concept jisme aapka ek type automatically convert ho jayega 
+
+// "5" + 1 ==> "51"
+// "5" - 1 ==> 4
+
+// 0, false, " ", null, undefined, NaN, document.all -> falsy values
+if(null){ // falsy value
+    console.log("Hello");  
+}
+
+
+if(-1){ // truthy value
+    console.log("Hello"); 
+}
+
+
 
 
 
