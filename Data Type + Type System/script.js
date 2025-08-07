@@ -49,6 +49,20 @@ g+=2n;
 console.log(g); 
 
 
+//Dynamic typing -> js mein static typing nahi hai and yaha par hai dynamic typing jiskha matlab hai app data ko change kr sakthe ho kyuki yaha par dynamic data types hai
+
+let r = 12;
+r = true;
+r = "OP";
+r = null;
+
+// typeof quirks (e.g -> typeof null === 'object')
+
+let c = 4;
+let w = "OP";
+console.log(typeof c);
+console.log(typeof w);
+
 
 
 
