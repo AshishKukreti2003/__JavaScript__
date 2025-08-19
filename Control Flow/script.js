@@ -28,3 +28,16 @@ function OP(val){
 }
 
 console.log(OP(250));
+
+
+// rock paper scissors logic
+
+function rps(user, comp){
+    if(user === comp) return "Tie";
+    if(user === 'P' && comp === 'S') return "Comp wins";
+    if(user === 'R' && comp === 'P') return "Comp wins";
+    if(user === 'S' && comp === 'R') return "Comp wins";
+    else return "User wins";
+}
+
+console.log(rps('S', 'R'));
