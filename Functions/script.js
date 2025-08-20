@@ -1,0 +1,92 @@
+// functions declarations
+// function abc(){
+//     console.log("hello");
+// }
+// abc();
+
+// functions expression
+// let a = function(){
+//     console.log("hehehe");
+// }
+// a();
+
+// fat arrow functions
+// let b = ()=>{
+//     console.log("hohohho");
+// }
+// b();
+
+// function dance(animal){
+//     console.log(`${animal} nach raha hai`);
+// }
+
+// dance("horse");
+// dance("donkey");
+
+//default parameters
+// function abc(v1 = 1, v2 = 2){
+//     console.log(v1+v2);
+// }
+
+// abc();
+// abc(4,5);
+// abc(-2,9);
+
+// rest parameters
+// jab arguments kai saare ho to humein utne hi parameter banane padege, issey bachne ke liya hm rest ka use karthe hai
+// function abc(...val){
+//     console.log(val);
+// }
+// abc(1,2,3,4,5,6,7,8,9,);
+
+
+// function abc(){
+//     return 12;
+// }
+
+// console.log(abc());
+
+//first class functions -> function ko value ki tarah treat karthe hai
+// function abc(val){
+//     val();
+// }
+
+// abc(function(){
+//     console.log("hey");
+// });
+
+//high order function -> hote hai ki return kare function ya fir accept kare func apne parameter mein
+
+// function abcd(){
+//     return function(){
+//         console.log("OPOP");
+//     }
+// }
+
+// abcd()();
+
+//pure vs impure function
+let a= 12;
+// aisa func jo ki baahar ki value ko na badle wo hai pure func
+function abc(){
+    console.log("OP");
+}
+console.log(a);
+
+// aisa func jo ki baahar ki value ko badle wo hai pure func
+// function abcd(){
+//     ++a;
+// }
+// abcd();
+// console.log(a);
+
+// closures -> ek func jo return kare ek aur func aur return hone wala func hamesha use karega parent func ka koi variable
+
+function abcd(){
+    let val = 12;
+    return function(){
+        ++val;
+    }
+}
+
+console.log(abcd());
