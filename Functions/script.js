@@ -73,7 +73,7 @@ function abc(){
 }
 console.log(a);
 
-// aisa func jo ki baahar ki value ko badle wo hai pure func
+// aisa func jo ki baahar ki value ko badle wo hai impure func
 // function abcd(){
 //     ++a;
 // }
@@ -113,3 +113,36 @@ function college(){
     console.log("UPES");
 }
 
+
+// use rest parameters to accept any number scores nad return the total
+
+function total(... scores){
+    let total_scores = 0;
+    scores.forEach(function(val){
+        total_scores += val;
+    });
+    return total_scores;
+}
+
+console.log(total(1,2,3,4,5,6));
+
+//Discount calculator
+
+function discountCal(discount){
+    return function(price){
+        return price - price*(discount/100);
+    };
+}
+
+let discounter = discountCal(10);
+console.log(discounter(200));
+
+function counter(){
+    let count = 0;
+    return function(){
+        count++;
+        return count;
+    };
+}
+
+console.log(counter())
