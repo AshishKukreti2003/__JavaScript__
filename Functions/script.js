@@ -80,13 +80,36 @@ console.log(a);
 // abcd();
 // console.log(a);
 
-// closures -> ek func jo return kare ek aur func aur return hone wala func hamesha use karega parent func ka koi variable
+// closures scoping -> ek func jo return kare ek aur func aur return hone wala func hamesha use karega parent func ka koi variable
 
-function abcd(){
-    let val = 12;
-    return function(){
-        ++val;
-    }
+// function abcd(){
+//     let val = 12;
+//     return function(){
+//         ++val;
+//     }
+// }
+// console.log(abcd());
+
+// lexical scoping 
+// function op(){
+//     let a = 10;
+//     function op1(){
+//         let b = 20;
+//         function op3(){
+//             let c = 30;
+//         }
+//     }
+// }
+
+// IIFE(Immediately invoked Function expressions)
+(function(){
+    console.log("op");
+})();
+
+//Hoisting --> it only works in function declarations
+college();
+
+function college(){
+    console.log("UPES");
 }
 
-console.log(abcd());
