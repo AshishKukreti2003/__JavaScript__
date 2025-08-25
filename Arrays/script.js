@@ -116,6 +116,55 @@ let arr8 = [1,2,3,4,5,6,7,8,9];
 let new_Arr = arr8; // it is a reference copy of arr8 if we change new_Arr will also change in arr8
 let new_Arr1 = [...arr8]; // it will create a new copy of arr8
 
-//6:56
+
+// Insert "Red" and "Blue" at index 1 in this array
+let colors = ["Green", "Yellow"];
+colors.splice(1,0,"Red","Blue");
+
+//Sort this array alphabetically and then reverse it
+let names = ["Zara","Arjun", "Mira", "Bhavya"];
+let newNames = names.sort();
+console.log(newNames);
+console.log(newNames.reverse());
+
+//Use .map to square each number
+let mapArr = [1,2,3,4,5,6];
+let newMapArr = mapArr.map(function(val){
+    return val*val;
+});
+console.log(newMapArr);
+
+//Use .filter() to keep numbers greater than 10.
+let filterArr = [5,10,4,40,6,60,70];
+let newFilterArr = filterArr.filter(function(val){
+    if(val > 10){
+        return val;
+    }
+});
+console.log(newFilterArr);
+
+// Use .reduce() to find the sum of this array
+let reduceArr = [1,2,3,4,5,6,7,8,9];
+let newReduceArr = reduceArr.reduce((accu,val) =>{
+    return accu+val;
+},0);
+console.log(newReduceArr);
+
+// Use .find() to find the first numbers less than 10.
+let findArr = [90,8,6,57,5,34,5,8,3,2,,678,34,435,6,4,2,6,7,6];
+let newFindArr = findArr.find((val) =>{
+    return val < 10;
+});
+console.log(newFindArr);
+
+//Destructure this array to get firstName and LastName
+let fullName = ["Ashish","Kukreti"];
+let [firstName, lastName] = fullName;
+
+//Merge two arrays using spread operator
+let A1 = [1,2];
+let A2 = [3,4];
+let finalA = [...A1,...A2];
+console.log(finalA);
 
 
