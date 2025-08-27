@@ -46,3 +46,35 @@ for(let key in newObj){
 console.log(Object.keys(newObj)); // it saves the key in array form
 
 let newNewObj = {...newObj}; // spread operator 
+
+
+let obj2 = {
+    name: "OP",
+    age: 34,
+    address : {
+        city: "Indore"
+    },
+};
+console.log(obj2);
+let obj3 = {...obj2}; // it will copy all the key and its values but uses the reference of nested key
+console.log(obj3);
+// ex: 
+obj3.address.city = "Rishikesh"; // it will change in obj2 also
+console.log(obj2);
+console.log(obj3);
+
+//deep clone
+let obj4 = JSON.parse(JSON.stringify(obj2));
+obj4.address.city = "Bhopal";
+
+
+console.log(obj4?.addresss?.city); // it will not return the error if it exit or not
+// console.log(obj4.addresss.city); // addresss is not in obj4 so it will return error
+
+let role = "admin";
+let newObj1 = {
+    name: "Ashish",
+    age: 34,
+    [role] : "ServiceNow Developer",
+};
+console.log(newObj1);
